@@ -1,0 +1,271 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body, html {
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	height: 100%;
+	position: relative;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+/* Fixed sidenav, full height */
+.sidenav {
+	width: 250px;
+	background-color:purple;
+	position: absolute;
+	top: 0%;
+	left: 0;
+	bottom: 0;
+	box-shadow: 1px 0px 10px #777;
+    	height: 500px;
+   	 z-index: 1;
+   	 overflow-x: hidden;
+   	 padding-top: 20px;
+}
+.sidenav a {
+	font-size: 150%;
+	display: inline-block;
+	padding: 30px 0px;
+	padding-left: 30px;
+	opacity: 0.7;
+	transition: all 0.2s;
+    	padding: 6px 8px 6px 16px;
+   	 text-decoration: none;
+    	font-size: 20px;
+    	color: white;
+    	display: block;
+    	border: none;
+    	background: none;
+    	width: 100%;
+    	text-align: left;
+    	cursor: pointer;
+    	outline: none;
+}
+.dropdown-container a{
+	
+	text-decoration: none;
+   	 font-size: 20px;
+   	 color: white;
+    	display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+/* Style the sidenav links and the dropdown button */
+ .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: floralwhite;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color:darkorchid;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: orchid;
+  padding-left: 15px;
+}
+.navbar {
+	width: 100%;
+	padding-top: 0px;
+	color: #D5D3D3;
+	background-color: cadetblue;		 ;
+	cursor: pointer;
+	display: inline-block;
+}
+.navbar:active {
+	background-color: #090909; 
+}
+.navbar nav
+{
+    display:block;
+    margin:0;
+    padding:20px 0; 
+    padding-left: 10px;
+    color:#C0BAB6; 
+    background-color:midnightblue; 
+    clear:both;
+}
+.navbar nav ul
+{
+    padding:0 20px;
+}
+.navbar nav li
+{
+    display:inline; 
+    margin-right:25px; 
+    text-transform:uppercase;
+}
+.navbar nav ul li:last-child {
+    float: right;
+}
+
+
+.navbar nav li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.navbar nav li a:hover
+{
+    color:whitesmoke; 
+    background-color:purple;
+}
+
+
+.header {
+	height: 80px;
+	width: 100%;
+	background-color: #274C6B;
+	display: inline-block;
+    align-items: center;
+}
+
+.header .logo {
+	opacity: 0.9;
+	font-size: 120%;
+	padding-top: 9px;
+	padding-left: 8px;
+	color: #fff;
+    align-items: center;
+	background-image: url(../images/admin.PNG);
+	background-color: #cccccc;
+	height: 90px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.header .logo span {
+	font-weight: 300;
+}
+#dashboard{
+    height: 500px;
+}
+.container {
+	width: 100%;
+	position:relative;
+}
+.main-content {
+	background-color: lavenderblush;
+	width: calc(100% - 250px);
+	margin-left: 250px;
+	padding: 20px 30px;
+    height: 500px;
+}
+.main-content .panel-wrapper {
+	margin: 20px 0;
+	box-shadow: 0px 1px 5px #777;
+}
+
+.main-content .panel-wrapper .panel-head {
+	background-color: #00A5F2;
+	color: #fff;
+	padding: 10px 10px;
+	border: 1px solid #00A5F2;
+}
+.main-content .panel-wrapper .panel-body {
+	padding: 20px 10px;
+	font-size: 80%;
+}
+.footer {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    background-color: #274C6B;
+}
+.footer > p{
+    font-size: 18px;
+    color: white;
+    align-self: center;
+}
+@media only screen and (max-width: 480px){
+	.header {
+		display: block;
+	}
+	.navbar{
+		display: none;
+	}
+	.nav-btn {
+		display: block;
+	}
+	.sidenav {
+		position: relative;
+		height: 378px;
+		width: 100%;
+		display: none;
+		margin-bottom: 40px;
+		z-index: 1000;
+	}
+	.main-content {
+		width: 100%;
+		margin-left: 0;
+		z-index: -1;
+		position: relative;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.header {
+		display: block;
+	}
+	.nav-btn {
+		display: block;
+	}
+	.sidenav {
+		position: relative;
+		height: 378px;
+		width: 100%;
+		display: none;
+		margin-bottom: 40px;
+		z-index: 1000;
+	}
+	.main-content {
+		width: 100%;
+		margin-left: 0;
+		z-index: -1;
+		position: relative;
+	}
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
